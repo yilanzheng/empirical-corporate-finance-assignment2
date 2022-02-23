@@ -1,0 +1,2949 @@
+-----------------------------------------------------------------------------------------------------
+      name:  <unnamed>
+       log:  /Users/catherinez/Desktop/ecf/assignment2/assignment2.log
+  log type:  text
+ opened on:  22 Feb 2022, 22:43:04
+
+. use full_data
+file full_data.dta not found
+r(601);
+
+. do "/var/folders/cg/tlbkj1617q313hnpl7tm3krw0000gn/T//SD47128.000000"
+
+. global raw_data ~/Desktop/ecf/assignment2/raw_data
+
+. global intermediate ~/Desktop/ecf/assignment2/intermediate_data
+
+. global output ~/Desktop/ecf/assignment2/output
+
+. 
+end of do-file
+
+. use $intermediate/full_data
+
+. sum pct_mf_own pct_passive_own pct_active_own pct_unclassified_own pct_ind_dir poison_pill_removal 
+> special_meeting dualclass supp_mgmt supp_sh roa, d
+
+                Total mutual fund ownership %
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%     1.398675       .1215952
+ 5%     4.004968       .1265307
+10%     6.914788       .1562304       Obs               4,377
+25%     13.70323       .4072918       Sum of Wgt.       4,377
+
+50%     21.87822                      Mean           22.32698
+                        Largest       Std. Dev.      11.77055
+75%     30.28761       67.81691
+90%     37.25343       67.90121       Variance       138.5458
+95%     41.31229       68.87694       Skewness       1.113338
+99%     49.83646       206.3344       Kurtosis       16.07959
+
+                     Passive ownership %
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%     .1404725              0
+ 5%     .2655871       .0010748
+10%     .3823119       .0042263       Obs               4,377
+25%     .7814239       .0076084       Sum of Wgt.       4,377
+
+50%     1.695289                      Mean           1.912761
+                        Largest       Std. Dev.      1.357508
+75%     2.754537       9.040012
+90%     3.695877       10.08619       Variance       1.842828
+95%     4.236847       10.40511       Skewness       1.083007
+99%     6.001478       10.83557       Kurtosis       5.127869
+
+                     Active ownership %
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%     .7994283       .0592413
+ 5%     3.083559       .1122157
+10%     5.710744       .1223045       Obs               4,377
+25%     11.70432       .1263784       Sum of Wgt.       4,377
+
+50%      19.3686                      Mean           20.02735
+                        Largest       Std. Dev.      11.21512
+75%     27.54447       65.29975
+90%     34.21481       65.50809       Variance       125.7789
+95%     38.14109        66.1246       Skewness       1.282022
+99%     46.85184        201.743       Kurtosis        18.2357
+
+                  Unclassified ownership %
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%            0              0
+ 5%     .0017362              0
+10%     .0124268              0       Obs               4,377
+25%     .0800611              0       Sum of Wgt.       4,377
+
+50%     .2440751                      Mean           .3868689
+                        Largest       Std. Dev.      .4736651
+75%      .513268       4.254795
+90%      .933217        5.10764       Variance       .2243587
+95%     1.272185       5.193912       Skewness       3.069654
+99%     2.277729       5.869994       Kurtosis       19.61048
+
+                   Independent director %
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%     14.28571              0
+ 5%           30              0
+10%           40              0       Obs               2,660
+25%     55.55556              0       Sum of Wgt.       2,660
+
+50%     66.66666                      Mean           64.96658
+                        Largest       Std. Dev.      18.04142
+75%     78.57143       92.85714
+90%         87.5       92.85714       Variance       325.4927
+95%     88.88889       92.85714       Skewness      -.7608208
+99%     90.90909            100       Kurtosis       3.275128
+
+                     Poison pill removal
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%            0              0
+ 5%            0              0
+10%            0              0       Obs               1,754
+25%            0              0       Sum of Wgt.       1,754
+
+50%            0                      Mean           .0142531
+                        Largest       Std. Dev.      .1185664
+75%            0              1
+90%            0              1       Variance        .014058
+95%            0              1       Skewness       8.196003
+99%            1              1       Kurtosis       68.17446
+
+           Greater ability to call special meeting
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%            0              0
+ 5%            0              0
+10%            0              0       Obs               1,754
+25%            0              0       Sum of Wgt.       1,754
+
+50%            0                      Mean           .0057013
+                        Largest       Std. Dev.      .0753126
+75%            0              1
+90%            0              1       Variance        .005672
+95%            0              1       Skewness       13.13034
+99%            0              1       Kurtosis       173.4057
+
+               Indicator for dual class shares
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%            0              0
+ 5%            0              0
+10%            0              0       Obs               1,754
+25%            0              0       Sum of Wgt.       1,754
+
+50%            0                      Mean           .1277081
+                        Largest       Std. Dev.      .3338597
+75%            0              1
+90%            1              1       Variance       .1114623
+95%            1              1       Skewness       2.230866
+99%            1              1       Kurtosis       5.976762
+
+                  Mngt. proposal support %
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%     75.69176              0
+ 5%     86.75648       52.31231
+10%     90.10735       53.17578       Obs               1,359
+25%     94.42808       59.38234       Sum of Wgt.       1,359
+
+50%     97.48851                      Mean           95.90884
+                        Largest       Std. Dev.       5.69465
+75%     99.36245            100
+90%     99.99703            100       Variance       32.42904
+95%          100            100       Skewness      -5.644235
+99%          100            100       Kurtosis       70.74604
+
+             Shareholder gov. proposal support %
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%     1.480619       .4867654
+ 5%     3.559093       1.480619
+10%     6.654044       1.736102       Obs                 108
+25%     12.08737        2.40961       Sum of Wgt.         108
+
+50%     26.87473                      Mean           34.23153
+                        Largest       Std. Dev.       24.8884
+75%     56.68206       77.15894
+90%     72.12749        77.4605       Variance       619.4325
+95%     75.56715       82.76198       Skewness       .4934075
+99%     82.76198       96.38271       Kurtosis       1.971094
+
+                             ROA
+-------------------------------------------------------------
+      Percentiles      Smallest
+ 1%     -.419066      -1.128058
+ 5%    -.1462103      -1.039266
+10%    -.0510634      -.9670921       Obs               3,409
+25%     .0110136      -.9312594       Sum of Wgt.       3,409
+
+50%     .0385794                      Mean           .0325831
+                        Largest       Std. Dev.      .1130183
+75%     .0801057       .4520511
+90%     .1281392       .5316442       Variance       .0127731
+95%     .1648578       .6423439       Skewness       -2.61521
+99%     .2746188       .6492076       Kurtosis       20.58401
+
+. estpost sum pct_mf_own pct_passive_own pct_active_own pct_unclassified_own pct_ind_dir poison_pill_
+> removal special_meeting dualclass supp_mgmt supp_sh roa, d
+
+             |  e(count)   e(sum_w)    e(mean)     e(Var)      e(sd)  e(skewn~)  e(kurto~) 
+-------------+-----------------------------------------------------------------------------
+  pct_mf_own |      4377       4377   22.32698   138.5458   11.77055   1.113338   16.07959 
+pct_passiv~n |      4377       4377   1.912761   1.842828   1.357508   1.083007   5.127869 
+pct_active~n |      4377       4377   20.02735   125.7789   11.21512   1.282022    18.2357 
+pct_unclas~n |      4377       4377   .3868689   .2243587   .4736651   3.069654   19.61048 
+ pct_ind_dir |      2660       2660   64.96658   325.4927   18.04142  -.7608208   3.275128 
+poison_pil~l |      1754       1754   .0142531    .014058   .1185664   8.196003   68.17446 
+special_me~g |      1754       1754   .0057013    .005672   .0753126   13.13034   173.4057 
+   dualclass |      1754       1754   .1277081   .1114623   .3338597   2.230866   5.976762 
+   supp_mgmt |      1359       1359   95.90884   32.42904    5.69465  -5.644235   70.74604 
+     supp_sh |       108        108   34.23153   619.4325    24.8884   .4934075   1.971094 
+         roa |      3409       3409   .0325831   .0127731   .1130183   -2.61521   20.58401 
+
+             |    e(sum)     e(min)     e(max)      e(p1)      e(p5)     e(p10)     e(p25) 
+-------------+-----------------------------------------------------------------------------
+  pct_mf_own |  97725.19   .1215952   206.3344   1.398675   4.004968   6.914788   13.70323 
+pct_passiv~n |  8372.156          0   10.83557   .1404725   .2655871   .3823119   .7814239 
+pct_active~n |  87659.71   .0592413    201.743   .7994283   3.083559   5.710744   11.70432 
+pct_unclas~n |  1693.325          0   5.869994          0   .0017362   .0124268   .0800611 
+ pct_ind_dir |  172811.1          0        100   14.28571         30         40   55.55556 
+poison_pil~l |        25          0          1          0          0          0          0 
+special_me~g |        10          0          1          0          0          0          0 
+   dualclass |       224          0          1          0          0          0          0 
+   supp_mgmt |  130340.1          0        100   75.69176   86.75648   90.10735   94.42808 
+     supp_sh |  3697.005   .4867654   96.38271   1.480619   3.559093   6.654044   12.08737 
+         roa |   111.076  -1.128058   .6492076   -.419066  -.1462103  -.0510634   .0110136 
+
+             |    e(p50)     e(p75)     e(p90)     e(p95)     e(p99) 
+-------------+-------------------------------------------------------
+  pct_mf_own |  21.87822   30.28761   37.25343   41.31229   49.83646 
+pct_passiv~n |  1.695289   2.754537   3.695877   4.236847   6.001478 
+pct_active~n |   19.3686   27.54447   34.21481   38.14109   46.85184 
+pct_unclas~n |  .2440751    .513268    .933217   1.272185   2.277729 
+ pct_ind_dir |  66.66666   78.57143       87.5   88.88889   90.90909 
+poison_pil~l |         0          0          0          0          1 
+special_me~g |         0          0          0          0          0 
+   dualclass |         0          0          1          1          1 
+   supp_mgmt |  97.48851   99.36245   99.99703        100        100 
+     supp_sh |  26.87473   56.68206   72.12749   75.56715   82.76198 
+         roa |  .0385794   .0801057   .1281392   .1648578   .2746188 
+
+. esttab, cells("count mean(fmt(%7.3g)) p50(fmt(%7.3g)) sd(fmt(%7.3g))") label collabels("Obs." "Mean
+> " "Median" "SD") noobs nomtitle nonumber title(Summary Statistics)
+
+Summary Statistics
+------------------------------------------------------------------------
+                             Obs.         Mean       Median           SD
+------------------------------------------------------------------------
+Total mutual fund ~%         4377         22.3         21.9         11.8
+Passive ownership %          4377         1.91          1.7         1.36
+Active ownership %           4377           20         19.4         11.2
+Unclassified owner~%         4377         .387         .244         .474
+Independent direct~%         2660           65         66.7           18
+Poison pill removal          1754        .0143            0         .119
+Greater ability to~          1754        .0057            0        .0753
+Indicator for dual~s         1754         .128            0         .334
+Mngt. proposal sup~%         1359         95.9         97.5         5.69
+Shareholder g.. pr~%          108         34.2         26.9         24.9
+ROA                          3409        .0326        .0386         .113
+------------------------------------------------------------------------
+
+. use $intermediate/reg_data
+
+. reg pct_mf_own r2000 ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3 ln_float i.year, vce(clust
+> er cusip6)
+
+Linear regression                               Number of obs     =      4,365
+                                                F(11, 1718)       =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.2234
+                                                Root MSE          =      10.39
+
+                                  (Std. Err. adjusted for 1,719 clusters in cusip6)
+-----------------------------------------------------------------------------------
+                  |               Robust
+       pct_mf_own |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+------------------+----------------------------------------------------------------
+            r2000 |   1.416375    .527894     2.68   0.007     .3809925    2.451758
+  ln_may_mrkt_cap |   872.4027   701.4058     1.24   0.214    -503.2965    2248.102
+ln_may_mrkt_cap_2 |  -40.95282   32.92713    -1.24   0.214    -105.5343    23.62866
+ln_may_mrkt_cap_3 |   .6343528   .5149769     1.23   0.218    -.3756951    1.644401
+         ln_float |   8.788145   .5194252    16.92   0.000     7.769372    9.806917
+                  |
+             year |
+            1999  |  -.1758105   .6745562    -0.26   0.794    -1.498848    1.147227
+            2000  |   -.203517   .5770665    -0.35   0.724    -1.335344      .92831
+            2001  |    1.62948   .6025519     2.70   0.007     .4476677    2.811293
+            2002  |   4.770328    .603864     7.90   0.000     3.585942    5.954714
+            2003  |   5.025541   .5888891     8.53   0.000     3.870525    6.180556
+            2004  |   6.038906   .6282072     9.61   0.000     4.806774    7.271037
+            2005  |   7.056767   .6559311    10.76   0.000      5.77026    8.343275
+            2006  |   9.011233   .6979974    12.91   0.000     7.642219    10.38025
+                  |
+            _cons |   -6239.05   4977.839    -1.25   0.210    -16002.31    3524.215
+-----------------------------------------------------------------------------------
+
+. 
+. do "/var/folders/cg/tlbkj1617q313hnpl7tm3krw0000gn/T//SD47128.000000"
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 3
+
+added macro:
+         e(Polynomial) : "3"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col1
+
+. 
+. reg pct_passive_own r2000 ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3 ln_float i.year, vce(
+> cluster cusip6)
+
+Linear regression                               Number of obs     =      4,365
+                                                F(13, 1718)       =     279.98
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.5885
+                                                Root MSE          =     .87244
+
+                                  (Std. Err. adjusted for 1,719 clusters in cusip6)
+-----------------------------------------------------------------------------------
+                  |               Robust
+  pct_passive_own |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+------------------+----------------------------------------------------------------
+            r2000 |   .3493079   .0456826     7.65   0.000     .2597085    .4389072
+  ln_may_mrkt_cap |   113.9392   74.98738     1.52   0.129    -33.13695    261.0154
+ln_may_mrkt_cap_2 |  -5.334338   3.542025    -1.51   0.132    -12.28147    1.612797
+ln_may_mrkt_cap_3 |   .0826131   .0557374     1.48   0.138    -.0267073    .1919334
+         ln_float |   .7237275   .0472295    15.32   0.000     .6310942    .8163609
+                  |
+             year |
+            1999  |   .1686145   .0301501     5.59   0.000     .1094797    .2277492
+            2000  |   .3580414   .0367442     9.74   0.000     .2859734    .4301094
+            2001  |   .7648489   .0366784    20.85   0.000     .6929099     .836788
+            2002  |   1.323517   .0438436    30.19   0.000     1.237524    1.409509
+            2003  |   1.411637   .0412483    34.22   0.000     1.330735    1.492539
+            2004  |   1.953588   .0524309    37.26   0.000     1.850753    2.056423
+            2005  |   2.273106   .0652071    34.86   0.000     2.145212    2.400999
+            2006  |   2.769797   .0668544    41.43   0.000     2.638672    2.900921
+                  |
+            _cons |  -814.8801   528.9303    -1.54   0.124    -1852.295    222.5351
+-----------------------------------------------------------------------------------
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 3
+
+added macro:
+         e(Polynomial) : "3"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col2
+
+. 
+. reg pct_active_own r2000 ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3 ln_float i.year, vce(c
+> luster cusip6)
+
+Linear regression                               Number of obs     =      4,365
+                                                F(12, 1718)       =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.1608
+                                                Root MSE          =     10.292
+
+                                  (Std. Err. adjusted for 1,719 clusters in cusip6)
+-----------------------------------------------------------------------------------
+                  |               Robust
+   pct_active_own |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+------------------+----------------------------------------------------------------
+            r2000 |   1.034444   .5238939     1.97   0.048     .0069074    2.061981
+  ln_may_mrkt_cap |   730.3406   652.7215     1.12   0.263    -549.8719    2010.553
+ln_may_mrkt_cap_2 |    -34.317   30.61937    -1.12   0.263    -94.37216    25.73817
+ln_may_mrkt_cap_3 |   .5317988   .4785196     1.11   0.267    -.4067436    1.470341
+         ln_float |   7.920031    .499656    15.85   0.000     6.940033    8.900029
+                  |
+             year |
+            1999  |  -.2470738    .664007    -0.37   0.710    -1.549421    1.055274
+            2000  |  -.4587876   .5703771    -0.80   0.421    -1.577494    .6599191
+            2001  |   .9243692   .5951989     1.55   0.121    -.2430216     2.09176
+            2002  |   3.409328   .5977739     5.70   0.000     2.236887    4.581769
+            2003  |   3.505548   .5841045     6.00   0.000     2.359917    4.651179
+            2004  |   3.895382   .6233793     6.25   0.000      2.67272    5.118044
+            2005  |   4.506883   .6476773     6.96   0.000     3.236564    5.777202
+            2006  |   5.892293   .6897281     8.54   0.000     4.539498    7.245088
+                  |
+            _cons |  -5221.164   4635.478    -1.13   0.260    -14312.94    3870.611
+-----------------------------------------------------------------------------------
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 3
+
+added macro:
+         e(Polynomial) : "3"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col3
+
+. 
+. reg pct_unclassified_own r2000 ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3 ln_float i.year,
+>  vce(cluster cusip6)
+
+Linear regression                               Number of obs     =      4,365
+                                                F(12, 1718)       =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.1417
+                                                Root MSE          =      .4399
+
+                                  (Std. Err. adjusted for 1,719 clusters in cusip6)
+-----------------------------------------------------------------------------------
+                  |               Robust
+pct_unclassifie~n |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+------------------+----------------------------------------------------------------
+            r2000 |   .0326229   .0194579     1.68   0.094    -.0055407    .0707866
+  ln_may_mrkt_cap |   28.12287    17.7732     1.58   0.114    -6.736508    62.98225
+ln_may_mrkt_cap_2 |   -1.30148   .8432086    -1.54   0.123    -2.955304    .3523435
+ln_may_mrkt_cap_3 |   .0199409   .0133231     1.50   0.135    -.0061903    .0460721
+         ln_float |   .1443865   .0167667     8.61   0.000     .1115012    .1772718
+                  |
+             year |
+            1999  |  -.0973512   .0224009    -4.35   0.000     -.141287   -.0534153
+            2000  |  -.1027707   .0233122    -4.41   0.000    -.1484941   -.0570474
+            2001  |  -.0597378   .0235125    -2.54   0.011     -.105854   -.0136217
+            2002  |   .0374832   .0256582     1.46   0.144    -.0128414    .0878078
+            2003  |   .1083556   .0282333     3.84   0.000     .0529805    .1637308
+            2004  |   .1899361   .0292051     6.50   0.000     .1326549    .2472173
+            2005  |   .2767791   .0323977     8.54   0.000      .213236    .3403222
+            2006  |   .3491431   .0347104    10.06   0.000     .2810639    .4172222
+                  |
+            _cons |  -203.0057   124.7467    -1.63   0.104    -447.6771     41.6658
+-----------------------------------------------------------------------------------
+
+. estadd local Bandwidth 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial 3
+
+added macro:
+         e(Polynomial) : "3"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col4
+
+. 
+end of do-file
+
+. esttab col*, keep(r2000) stats(Bandwidth Polynomial float_control year_fixed_effect N_clust N r2, l
+> abel("Bandwidth" "Polynomial order, N" "Float control" "Year fixed effects" "# of firms" "Observati
+> ons" "R-squared")) se mtitle("All mutual funds" "Passive" "Active" "Unclassified") title("Table 2: 
+> Impact of index assignment on mutual fund ownership.") label
+
+Table 2: Impact of index assignment on mutual fund ownership.
+------------------------------------------------------------------------------------
+                              (1)             (2)             (3)             (4)   
+                     All mutual~s         Passive          Active    Unclassified   
+------------------------------------------------------------------------------------
+DummyRussell2000            1.416**         0.349***        1.034*         0.0326   
+                          (0.528)        (0.0457)         (0.524)        (0.0195)   
+------------------------------------------------------------------------------------
+Bandwidth                     250             250             250             250   
+Polynomial order, N             3               3               3               3   
+Float control                 Yes             Yes             Yes             Yes   
+Year fixed effects            Yes             Yes             Yes             Yes   
+# of firms                   1719            1719            1719            1719   
+Observations                 4365            4365            4365            4365   
+R-squared                   0.223           0.589           0.161           0.142   
+------------------------------------------------------------------------------------
+Standard errors in parentheses
+* p<0.05, ** p<0.01, *** p<0.001
+
+. estimates clear
+
+. sum pct_passive_own
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+pct_passiv~n |      4,377    1.912761    1.357508          0   10.83557
+
+. gen pct_passive_own_scaled = pct_passive_own/`r(sd)'
+
+. lab var pct_passive_own_scaled "Passive %"
+
+. 
+. reg pct_passive_own_scaled r2000 ln_may_mrkt_cap ln_float i.year, vce(cluster cusip6)
+
+Linear regression                               Number of obs     =      4,365
+                                                F(11, 1718)       =     297.05
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.5874
+                                                Root MSE          =     .64345
+
+                                (Std. Err. adjusted for 1,719 clusters in cusip6)
+---------------------------------------------------------------------------------
+                |               Robust
+pct_passive_o~d |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+----------------+----------------------------------------------------------------
+          r2000 |   .2865158   .0306765     9.34   0.000     .2263485    .3466831
+ln_may_mrkt_cap |  -.5422707   .0448879   -12.08   0.000    -.6303114   -.4542301
+       ln_float |   .5440924   .0350791    15.51   0.000     .4752901    .6128946
+                |
+           year |
+          1999  |   .1297804   .0223081     5.82   0.000     .0860266    .1735343
+          2000  |   .2648604   .0274905     9.63   0.000     .2109421    .3187787
+          2001  |   .5700101   .0263522    21.63   0.000     .5183242     .621696
+          2002  |   .9876091   .0320937    30.77   0.000     .9246622    1.050556
+          2003  |   1.054138    .029854    35.31   0.000     .9955844    1.112692
+          2004  |   1.440038   .0388025    37.11   0.000     1.363933    1.516143
+          2005  |   1.667796   .0481746    34.62   0.000     1.573309    1.762283
+          2006  |   2.024135   .0492117    41.13   0.000     1.927614    2.120657
+                |
+          _cons |   4.186561   .8909325     4.70   0.000     2.439134    5.933988
+---------------------------------------------------------------------------------
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 1
+
+added macro:
+         e(Polynomial) : "1"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col1
+
+. 
+. reg pct_passive_own_scaled r2000 ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float i.year, vce(cluster cus
+> ip6)
+
+Linear regression                               Number of obs     =      4,365
+                                                F(12, 1718)       =     276.30
+                                                Prob > F          =     0.0000
+                                                R-squared         =     0.5879
+                                                Root MSE          =      .6431
+
+                                  (Std. Err. adjusted for 1,719 clusters in cusip6)
+-----------------------------------------------------------------------------------
+                  |               Robust
+pct_passive_own~d |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+------------------+----------------------------------------------------------------
+            r2000 |   .2845988   .0304349     9.35   0.000     .2249053    .3442922
+  ln_may_mrkt_cap |   2.291422   1.767053     1.30   0.195     -1.17438    5.757224
+ln_may_mrkt_cap_2 |   -.066819   .0417712    -1.60   0.110    -.1487467    .0151088
+         ln_float |   .5281252   .0346942    15.22   0.000      .460078    .5961725
+                  |
+             year |
+            1999  |   .1287406   .0222362     5.79   0.000     .0851278    .1723534
+            2000  |   .2645057   .0274001     9.65   0.000     .2107647    .3182467
+            2001  |   .5669219   .0264212    21.46   0.000     .5151008    .6187431
+            2002  |   .9819763   .0321997    30.50   0.000     .9188216    1.045131
+            2003  |    1.05046   .0298505    35.19   0.000     .9919132    1.109008
+            2004  |   1.434611   .0388517    36.93   0.000     1.358409    1.510812
+            2005  |   1.665403   .0481915    34.56   0.000     1.570882    1.759923
+            2006  |   2.025128   .0493006    41.08   0.000     1.928432    2.121823
+                  |
+            _cons |  -25.61799   18.64861    -1.37   0.170    -62.19436    10.95838
+-----------------------------------------------------------------------------------
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 2
+
+added macro:
+         e(Polynomial) : "2"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col2
+
+. 
+. reg pct_passive_own_scaled r2000 ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3 ln_float i.yea
+> r, vce(cluster cusip6)
+
+Linear regression                               Number of obs     =      4,365
+                                                F(12, 1718)       =          .
+                                                Prob > F          =          .
+                                                R-squared         =     0.5885
+                                                Root MSE          =     .64268
+
+                                  (Std. Err. adjusted for 1,719 clusters in cusip6)
+-----------------------------------------------------------------------------------
+                  |               Robust
+pct_passive_own~d |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+------------------+----------------------------------------------------------------
+            r2000 |   .2573155   .0336519     7.65   0.000     .1913126    .3233185
+  ln_may_mrkt_cap |   83.93265   55.23929     1.52   0.129    -24.41071     192.276
+ln_may_mrkt_cap_2 |  -3.929508   2.609226    -1.51   0.132    -9.047102    1.188086
+ln_may_mrkt_cap_3 |   .0608564   .0410589     1.48   0.138    -.0196742    .1413871
+         ln_float |   .5331295   .0347913    15.32   0.000     .4648917    .6013674
+                  |
+             year |
+            1999  |   .1242088   .0222099     5.59   0.000     .0806476    .1677701
+            2000  |    .263749   .0270674     9.74   0.000     .2106606    .3168375
+            2001  |   .5634214   .0270189    20.85   0.000     .5104279    .6164148
+            2002  |   .9749605   .0322971    30.19   0.000     .9116147    1.038306
+            2003  |   1.039874   .0303853    34.22   0.000      .980278     1.09947
+            2004  |   1.439099   .0386229    37.26   0.000     1.363346    1.514852
+            2005  |    1.67447   .0480344    34.86   0.000     1.580257    1.768682
+            2006  |   2.040354   .0492479    41.43   0.000     1.943762    2.136946
+                  |
+            _cons |  -600.2765   389.6354    -1.54   0.124    -1364.486    163.9333
+-----------------------------------------------------------------------------------
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 3
+
+added macro:
+         e(Polynomial) : "3"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col3
+
+. esttab col*, keep(r2000) stats(Bandwidth Polynomial float_control year_fixed_effect N_clust N r2, l
+> abel("Bandwidth" "Polynomial order, N" "Float control" "Year fixed effects" "# of firms" "Observati
+> ons" "R-squared")) se nomtitle title("Table 3: First-stage estimation for ownership by passively ma
+> naged funds.") label
+
+Table 3: First-stage estimation for ownership by passively managed funds.
+--------------------------------------------------------------------
+                              (1)             (2)             (3)   
+--------------------------------------------------------------------
+DummyRussell2000            0.287***        0.285***        0.257***
+                         (0.0307)        (0.0304)        (0.0337)   
+--------------------------------------------------------------------
+Bandwidth                     250             250             250   
+Polynomial order, N             1               2               3   
+Float control                 Yes             Yes             Yes   
+Year fixed effects            Yes             Yes             Yes   
+# of firms                   1719            1719            1719   
+Observations                 4365            4365            4365   
+R-squared                   0.587           0.588           0.589   
+--------------------------------------------------------------------
+Standard errors in parentheses
+* p<0.05, ** p<0.01, *** p<0.001
+
+. estimates clear
+
+. do "/var/folders/cg/tlbkj1617q313hnpl7tm3krw0000gn/T//SD47128.000000"
+
+. *****Table 4
+. sum pct_ind_dir
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+ pct_ind_dir |      2,660    64.96658    18.04142          0        100
+
+. gen pct_ind_dir_scaled = pct_ind_dir/`r(sd)'
+(1,717 missing values generated)
+
+. 
+. ivreghdfe pct_ind_dir_scaled ln_may_mrkt_cap ln_float (pct_passive_own_scaled = r2000), absorb(year
+> ) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =     1038                Number of obs =     2655
+                                                      F(  3,  1037) =    31.95
+                                                      Prob > F      =   0.0000
+Total (centered) SS     =  2411.830096                Centered R2   =   0.0630
+Total (uncentered) SS   =  2411.830096                Uncentered R2 =   0.0630
+Residual SS             =  2259.841459                Root MSE      =    .9247
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+    pct_ind_dir_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .5204372   .2396572     2.17   0.030     .0501689    .9907054
+       ln_may_mrkt_cap |  -.4659505   .2287038    -2.04   0.042    -.9147256   -.0171754
+              ln_float |   .8224628   .1380697     5.96   0.000     .5515348    1.093391
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):             42.005
+                                                   Chi-sq(1) P-val =    0.0000
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               93.115
+                         (Kleibergen-Paap rk Wald F statistic):         57.242
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         9           0           9     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 1
+
+added macro:
+         e(Polynomial) : "1"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col1
+
+. 
+. ivreghdfe pct_ind_dir_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float (pct_passive_own_scaled = r
+> 2000), absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =     1038                Number of obs =     2655
+                                                      F(  4,  1037) =    25.27
+                                                      Prob > F      =   0.0000
+Total (centered) SS     =  2411.830096                Centered R2   =   0.0452
+Total (uncentered) SS   =  2411.830096                Uncentered R2 =   0.0452
+Residual SS             =  2302.777026                Root MSE      =    .9336
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+    pct_ind_dir_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .6421023   .2214776     2.90   0.004      .207507    1.076698
+       ln_may_mrkt_cap |   18.35001   5.041389     3.64   0.000     8.457523     28.2425
+     ln_may_mrkt_cap_2 |  -.4403037   .1180188    -3.73   0.000    -.6718867   -.2087208
+              ln_float |   .7012884   .1351868     5.19   0.000     .4360175    .9665592
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):             33.543
+                                                   Chi-sq(1) P-val =    0.0000
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               89.397
+                         (Kleibergen-Paap rk Wald F statistic):         47.547
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         9           0           9     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 2
+
+added macro:
+         e(Polynomial) : "2"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col2
+
+. 
+. ivreghdfe pct_ind_dir_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3 ln_float (pct_pass
+> ive_own_scaled = r2000), absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =     1038                Number of obs =     2655
+                                                      F(  5,  1037) =    27.33
+                                                      Prob > F      =   0.0000
+Total (centered) SS     =  2411.830096                Centered R2   =   0.1136
+Total (uncentered) SS   =  2411.830096                Uncentered R2 =   0.1136
+Residual SS             =  2137.734752                Root MSE      =    .8997
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+    pct_ind_dir_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .2599917   .3067968     0.85   0.397    -.3420217    .8620051
+       ln_may_mrkt_cap |   533.9942     210.79     2.53   0.011     120.3707    947.6178
+     ln_may_mrkt_cap_2 |  -24.69427   9.949165    -2.48   0.013    -44.21706   -5.171479
+     ln_may_mrkt_cap_3 |   .3798616   .1563399     2.43   0.015      .073083    .6866402
+              ln_float |    .840461   .1510125     5.57   0.000     .5441361    1.136786
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):             26.570
+                                                   Chi-sq(1) P-val =    0.0000
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               41.391
+                         (Kleibergen-Paap rk Wald F statistic):         29.272
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3
+                      ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         9           0           9     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 3
+
+added macro:
+         e(Polynomial) : "3"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col3
+
+. 
+end of do-file
+
+. esttab col*, keep(pct_passive_own_scaled) stats(Bandwidth Polynomial float_control year_fixed_effec
+> t N_clust N, label("Bandwidth" "Polynomial order, N" "Float control" "Year fixed effects" "# of fir
+> ms" "Observations")) se nomtitle title("Table 4: Ownership by passive investors and board independe
+> nce.") label
+
+Table 4: Ownership by passive investors and board independence.
+--------------------------------------------------------------------
+                              (1)             (2)             (3)   
+--------------------------------------------------------------------
+Passive %                   0.520*          0.642**         0.260   
+                          (0.240)         (0.221)         (0.307)   
+--------------------------------------------------------------------
+Bandwidth                     250             250             250   
+Polynomial order, N             1               2               3   
+Float control                 Yes             Yes             Yes   
+Year fixed effects            Yes             Yes             Yes   
+# of firms                   1038            1038            1038   
+Observations                 2655            2655            2655   
+--------------------------------------------------------------------
+Standard errors in parentheses
+* p<0.05, ** p<0.01, *** p<0.001
+
+. estimates clear
+
+. ************Table 5
+
+. ivreghdfe pct_ind_dir_scaled ln_may_mrkt_cap ln_float (pct_passive_own_scaled = r2000) if year <= 2
+> 002, absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =      822                Number of obs =     1504
+                                                      F(  3,   821) =    22.70
+                                                      Prob > F      =   0.0000
+Total (centered) SS     =  1706.995879                Centered R2   =   0.1024
+Total (uncentered) SS   =  1706.995879                Uncentered R2 =   0.1024
+Residual SS             =   1532.14278                Root MSE      =    1.012
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+    pct_ind_dir_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .4452204   .2380155     1.87   0.062    -.0219701     .912411
+       ln_may_mrkt_cap |  -.4952407   .2175726    -2.28   0.023    -.9223049   -.0681766
+              ln_float |   .8032636   .1406397     5.71   0.000     .5272079    1.079319
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):             67.246
+                                                   Chi-sq(1) P-val =    0.0000
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):              176.002
+                         (Kleibergen-Paap rk Wald F statistic):        107.942
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         5           0           5     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 1
+
+added macro:
+         e(Polynomial) : "1"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col1
+
+. 
+. ivreghdfe pct_ind_dir_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float (pct_passive_own_scaled = r
+> 2000) if year <= 2002, absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =      822                Number of obs =     1504
+                                                      F(  4,   821) =    17.97
+                                                      Prob > F      =   0.0000
+Total (centered) SS     =  1706.995879                Centered R2   =   0.1128
+Total (uncentered) SS   =  1706.995879                Uncentered R2 =   0.1128
+Residual SS             =  1514.396667                Root MSE      =    1.006
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+    pct_ind_dir_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .5826401   .2155465     2.70   0.007     .1595531    1.005727
+       ln_may_mrkt_cap |   20.55137   5.910319     3.48   0.001     8.950258    32.15249
+     ln_may_mrkt_cap_2 |  -.4929134   .1388804    -3.55   0.000    -.7655159    -.220311
+              ln_float |   .6549358   .1406877     4.66   0.000     .3787858    .9310858
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):             46.688
+                                                   Chi-sq(1) P-val =    0.0000
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):              169.435
+                         (Kleibergen-Paap rk Wald F statistic):         85.694
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         5           0           5     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 2
+
+added macro:
+         e(Polynomial) : "2"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col2
+
+. 
+. ivreghdfe pct_ind_dir_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3 ln_float (pct_pass
+> ive_own_scaled = r2000) if year <= 2002, absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =      822                Number of obs =     1504
+                                                      F(  5,   821) =    23.09
+                                                      Prob > F      =   0.0000
+Total (centered) SS     =  1706.995879                Centered R2   =   0.1304
+Total (uncentered) SS   =  1706.995879                Uncentered R2 =   0.1304
+Residual SS             =  1484.399819                Root MSE      =    .9968
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+    pct_ind_dir_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .2557786   .2672133     0.96   0.339    -.2687232    .7802803
+       ln_may_mrkt_cap |   582.3269   184.4431     3.16   0.002     220.2912    944.3625
+     ln_may_mrkt_cap_2 |  -26.88689   8.701583    -3.09   0.002    -43.96686   -9.806918
+     ln_may_mrkt_cap_3 |   .4129584   .1366917     3.02   0.003     .1446521    .6812647
+              ln_float |    .708143   .1409234     5.03   0.000     .4315305    .9847555
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):             59.831
+                                                   Chi-sq(1) P-val =    0.0000
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               99.861
+                         (Kleibergen-Paap rk Wald F statistic):         74.635
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3
+                      ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         5           0           5     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 3
+
+added macro:
+         e(Polynomial) : "3"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col3
+
+. 
+. ivreghdfe pct_ind_dir_scaled ln_may_mrkt_cap ln_float (pct_passive_own_scaled = r2000) if year >= 2
+> 003, absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =      541                Number of obs =     1151
+                                                      F(  3,   540) =    12.11
+                                                      Prob > F      =   0.0000
+Total (centered) SS     =  704.8342171                Centered R2   =  -0.8189
+Total (uncentered) SS   =  704.8342171                Uncentered R2 =  -0.8189
+Residual SS             =  1282.023475                Root MSE      =    1.059
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+    pct_ind_dir_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   1.254642   1.283731     0.98   0.329    -1.267078    3.776361
+       ln_may_mrkt_cap |   .5233429     2.0002     0.26   0.794    -3.405784     4.45247
+              ln_float |   .1593496   1.504567     0.11   0.916    -2.796172    3.114871
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):              1.114
+                                                   Chi-sq(1) P-val =    0.2911
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):                2.144
+                         (Kleibergen-Paap rk Wald F statistic):          1.197
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         4           0           4     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 1
+
+added macro:
+         e(Polynomial) : "1"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col4
+
+. 
+. ivreghdfe pct_ind_dir_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float (pct_passive_own_scaled = r
+> 2000) if year >= 2003, absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =      541                Number of obs =     1151
+                                                      F(  4,   540) =     8.56
+                                                      Prob > F      =   0.0000
+Total (centered) SS     =  704.8342171                Centered R2   =  -1.0831
+Total (uncentered) SS   =  704.8342171                Uncentered R2 =  -1.0831
+Residual SS             =  1468.257515                Root MSE      =    1.133
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+    pct_ind_dir_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   1.410929   1.364681     1.03   0.302    -1.269805    4.091664
+       ln_may_mrkt_cap |   7.650651   10.21246     0.75   0.454    -12.41037    27.71168
+     ln_may_mrkt_cap_2 |   -.162193   .2391821    -0.68   0.498    -.6320343    .3076483
+              ln_float |  -.0203873   1.581039    -0.01   0.990    -3.126128    3.085353
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):              1.182
+                                                   Chi-sq(1) P-val =    0.2770
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):                2.394
+                         (Kleibergen-Paap rk Wald F statistic):          1.236
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         4           0           4     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 2
+
+added macro:
+         e(Polynomial) : "2"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col5
+
+. 
+. ivreghdfe pct_ind_dir_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3 ln_float (pct_pass
+> ive_own_scaled = r2000) if year >= 2003, absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =      541                Number of obs =     1151
+                                                      F(  5,   540) =     9.71
+                                                      Prob > F      =   0.0000
+Total (centered) SS     =  704.8342171                Centered R2   =  -0.3793
+Total (uncentered) SS   =  704.8342171                Uncentered R2 =  -0.3793
+Residual SS             =  972.1485013                Root MSE      =    .9226
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+    pct_ind_dir_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .9359645   1.154397     0.81   0.418    -1.331694    3.203623
+       ln_may_mrkt_cap |   452.8217   360.7787     1.26   0.210    -255.8799    1161.523
+     ln_may_mrkt_cap_2 |  -21.11857   16.93302    -1.25   0.213    -54.38124     12.1441
+     ln_may_mrkt_cap_3 |   .3282072   .2642898     1.24   0.215     -.190955    .8473694
+              ln_float |   .5285325   1.346235     0.39   0.695    -2.115966    3.173031
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):              1.014
+                                                   Chi-sq(1) P-val =    0.3139
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):                2.206
+                         (Kleibergen-Paap rk Wald F statistic):          1.010
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3
+                      ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         4           0           4     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 3
+
+added macro:
+         e(Polynomial) : "3"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col6
+
+. 
+. esttab col*, keep(pct_passive_own_scaled) stats(Bandwidth Polynomial float_control year_fixed_effec
+> t N_clust N, label("Bandwidth" "Polynomial order, N" "Float control" "Year fixed effects" "# of fir
+> ms" "Observations")) se nomtitle mgroups("Sample years=1998–2002" "Sample years=2003–2006", pattern
+> (0 1 0 0 1 0)) title("Table 5 Passive ownership and board independence, pre- versus post-2002 rule 
+> change.") label
+
+Table 5 Passive ownership and board independence, pre- versus post-2002 rule change.
+-----------------------------------------------------------------------------------------------------
+> ---------------
+                     Sample ~2002    Sample ~2006                                                    
+>                
+                              (1)             (2)             (3)             (4)             (5)    
+>          (6)   
+-----------------------------------------------------------------------------------------------------
+> ---------------
+Passive %                   0.445           0.583**         0.256           1.255           1.411    
+>        0.936   
+                          (0.238)         (0.216)         (0.267)         (1.284)         (1.365)    
+>      (1.154)   
+-----------------------------------------------------------------------------------------------------
+> ---------------
+Bandwidth                     250             250             250             250             250    
+>          250   
+Polynomial order, N             1               2               3               1               2    
+>            3   
+Float control                 Yes             Yes             Yes             Yes             Yes    
+>          Yes   
+Year fixed effects            Yes             Yes             Yes             Yes             Yes    
+>          Yes   
+# of firms                    822             822             822             541             541    
+>          541   
+Observations                 1504            1504            1504            1151            1151    
+>         1151   
+-----------------------------------------------------------------------------------------------------
+> ---------------
+Standard errors in parentheses
+* p<0.05, ** p<0.01, *** p<0.001
+
+. esttab col*, keep(pct_passive_own_scaled) stats(Bandwidth Polynomial float_control year_fixed_effec
+> t N_clust N, label("Bandwidth" "Polynomial order, N" "Float control" "Year fixed effects" "# of fir
+> ms" "Observations")) se nomtitle mgroups("Sample years=1998–2002" "Sample years=2003–2006", pattern
+> (0 1 0 0 1 0)) title("Table 5 Passive ownership and board independence, pre- versus post-2002 rule 
+> change.") label
+
+Table 5 Passive ownership and board independence, pre- versus post-2002 rule change.
+-----------------------------------------------------------------------------------------------------
+> ---------------
+                     Sample ~2002    Sample ~2006                                                    
+>                
+                              (1)             (2)             (3)             (4)             (5)    
+>          (6)   
+-----------------------------------------------------------------------------------------------------
+> ---------------
+Passive %                   0.445           0.583**         0.256           1.255           1.411    
+>        0.936   
+                          (0.238)         (0.216)         (0.267)         (1.284)         (1.365)    
+>      (1.154)   
+-----------------------------------------------------------------------------------------------------
+> ---------------
+Bandwidth                     250             250             250             250             250    
+>          250   
+Polynomial order, N             1               2               3               1               2    
+>            3   
+Float control                 Yes             Yes             Yes             Yes             Yes    
+>          Yes   
+Year fixed effects            Yes             Yes             Yes             Yes             Yes    
+>          Yes   
+# of firms                    822             822             822             541             541    
+>          541   
+Observations                 1504            1504            1504            1151            1151    
+>         1151   
+-----------------------------------------------------------------------------------------------------
+> ---------------
+Standard errors in parentheses
+* p<0.05, ** p<0.01, *** p<0.001
+
+. 
+. do "/var/folders/cg/tlbkj1617q313hnpl7tm3krw0000gn/T//SD47128.000000"
+
+. estimates clear
+
+. 
+. 
+. ******Table 6
+. sum poison_pill_removal
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+poison_pil~l |      1,754    .0142531    .1185664          0          1
+
+. gen poison_pill_removal_scaled = poison_pill_removal/`r(sd)'
+(2,623 missing values generated)
+
+. 
+. sum special_meeting
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+special_me~g |      1,754    .0057013    .0753126          0          1
+
+. gen special_meeting_scaled = special_meeting/`r(sd)'
+(2,623 missing values generated)
+
+. 
+. ivreghdfe poison_pill_removal_scaled ln_may_mrkt_cap ln_float (pct_passive_own_scaled = r2000), abs
+> orb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =     1012                Number of obs =     1751
+                                                      F(  3,  1011) =     1.48
+                                                      Prob > F      =   0.2173
+Total (centered) SS     =  1673.998656                Centered R2   =  -0.0135
+Total (uncentered) SS   =  1673.998656                Uncentered R2 =  -0.0135
+Residual SS             =  1696.521823                Root MSE      =    .9866
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+poison_pill_removal_~d |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .2662407    .259047     1.03   0.304    -.2420907     .774572
+       ln_may_mrkt_cap |     .23423    .237323     0.99   0.324    -.2314721    .6999321
+              ln_float |   -.117283   .2120879    -0.55   0.580     -.533466    .2988999
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):             16.437
+                                                   Chi-sq(1) P-val =    0.0001
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               27.122
+                         (Kleibergen-Paap rk Wald F statistic):         19.012
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         5           0           5     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 1
+
+added macro:
+         e(Polynomial) : "1"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col1
+
+. 
+. ivreghdfe poison_pill_removal_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float (pct_passive_own_sc
+> aled = r2000), absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =     1012                Number of obs =     1751
+                                                      F(  4,  1011) =     1.52
+                                                      Prob > F      =   0.1940
+Total (centered) SS     =  1673.998656                Centered R2   =  -0.0151
+Total (uncentered) SS   =  1673.998656                Uncentered R2 =  -0.0151
+Residual SS             =  1699.211749                Root MSE      =    .9876
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+poison_pill_removal_~d |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .2778498   .2631452     1.06   0.291    -.2385235    .7942231
+       ln_may_mrkt_cap |   3.967841     2.6385     1.50   0.133    -1.209723    9.145405
+     ln_may_mrkt_cap_2 |   -.087352   .0594206    -1.47   0.142    -.2039539    .0292499
+              ln_float |  -.1456447   .2206918    -0.66   0.509    -.5787111    .2874218
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):             15.425
+                                                   Chi-sq(1) P-val =    0.0001
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               26.704
+                         (Kleibergen-Paap rk Wald F statistic):         17.969
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         5           0           5     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 2
+
+added macro:
+         e(Polynomial) : "2"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col2
+
+. 
+. ivreghdfe poison_pill_removal_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3 ln_float (
+> pct_passive_own_scaled = r2000), absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =     1012                Number of obs =     1751
+                                                      F(  5,  1011) =     1.27
+                                                      Prob > F      =   0.2754
+Total (centered) SS     =  1673.998656                Centered R2   =  -0.0385
+Total (uncentered) SS   =  1673.998656                Uncentered R2 =  -0.0385
+Residual SS             =  1738.408745                Root MSE      =    .9993
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+poison_pill_removal_~d |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .3809711   .3624657     1.05   0.293    -.3303002    1.092242
+       ln_may_mrkt_cap |  -117.8849   143.9008    -0.82   0.413    -400.2634    164.4935
+     ln_may_mrkt_cap_2 |   5.643823   6.781862     0.83   0.405    -7.664314    18.95196
+     ln_may_mrkt_cap_3 |  -.0897318   .1062695    -0.84   0.399    -.2982658    .1188022
+              ln_float |  -.2279014    .300627    -0.76   0.449    -.8178257    .3620229
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):              9.610
+                                                   Chi-sq(1) P-val =    0.0019
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               12.659
+                         (Kleibergen-Paap rk Wald F statistic):         10.247
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3
+                      ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         5           0           5     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 3
+
+added macro:
+         e(Polynomial) : "3"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col3
+
+. 
+. ivreghdfe special_meeting_scaled ln_may_mrkt_cap ln_float (pct_passive_own_scaled = r2000), absorb(
+> year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =     1012                Number of obs =     1751
+                                                      F(  3,  1011) =     2.17
+                                                      Prob > F      =   0.0905
+Total (centered) SS     =  1741.691951                Centered R2   =  -0.2141
+Total (uncentered) SS   =  1741.691951                Uncentered R2 =  -0.2141
+Residual SS             =  2114.568267                Root MSE      =    1.101
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+special_meeting_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .6982534   .2838788     2.46   0.014     .1411944    1.255313
+       ln_may_mrkt_cap |    .595791   .2815237     2.12   0.035     .0433533    1.148229
+              ln_float |  -.4716492   .2060123    -2.29   0.022      -.87591   -.0673885
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):             16.437
+                                                   Chi-sq(1) P-val =    0.0001
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               27.122
+                         (Kleibergen-Paap rk Wald F statistic):         19.012
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         5           0           5     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 1
+
+added macro:
+         e(Polynomial) : "1"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col4
+
+. 
+. ivreghdfe special_meeting_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float (pct_passive_own_scaled
+>  = r2000), absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =     1012                Number of obs =     1751
+                                                      F(  4,  1011) =     1.83
+                                                      Prob > F      =   0.1214
+Total (centered) SS     =  1741.691951                Centered R2   =  -0.2109
+Total (uncentered) SS   =  1741.691951                Uncentered R2 =  -0.2109
+Residual SS             =  2109.040442                Root MSE      =      1.1
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+special_meeting_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .6932168   .2863283     2.42   0.016      .131351    1.255083
+       ln_may_mrkt_cap |  -1.024051   4.493185    -0.23   0.820    -9.841087    7.792984
+     ln_may_mrkt_cap_2 |    .037898   .1037124     0.37   0.715    -.1656183    .2414143
+              ln_float |  -.4593444   .2145061    -2.14   0.032    -.8802726   -.0384162
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):             15.425
+                                                   Chi-sq(1) P-val =    0.0001
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               26.704
+                         (Kleibergen-Paap rk Wald F statistic):         17.969
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         5           0           5     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 2
+
+added macro:
+         e(Polynomial) : "2"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col5
+
+. 
+. ivreghdfe special_meeting_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3 ln_float (pct_
+> passive_own_scaled = r2000), absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =     1012                Number of obs =     1751
+                                                      F(  5,  1011) =     1.24
+                                                      Prob > F      =   0.2859
+Total (centered) SS     =  1741.691951                Centered R2   =  -0.4520
+Total (uncentered) SS   =  1741.691951                Uncentered R2 =  -0.4520
+Residual SS             =  2528.920364                Root MSE      =    1.205
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+special_meeting_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   1.018625   .4715256     2.16   0.031      .093344    1.943906
+       ln_may_mrkt_cap |   -385.541    213.584    -1.81   0.071    -804.6598     33.5778
+     ln_may_mrkt_cap_2 |   18.12311   10.06122     1.80   0.072    -1.620144    37.86637
+     ln_may_mrkt_cap_3 |  -.2831565   .1576044    -1.80   0.073    -.5924256    .0261127
+              ln_float |  -.7189127   .3635952    -1.98   0.048      -1.4324   -.0054251
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):              9.610
+                                                   Chi-sq(1) P-val =    0.0019
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               12.659
+                         (Kleibergen-Paap rk Wald F statistic):         10.247
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3
+                      ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         5           0           5     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 3
+
+added macro:
+         e(Polynomial) : "3"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col6
+
+. 
+end of do-file
+
+. esttab col* , keep(pct_passive_own_scaled) stats(Bandwidth Polynomial float_control year_fixed_effe
+> ct N_clust N, label("Bandwidth" "Polynomial order, N" "Float control" "Year fixed effects" "# of fi
+> rms" "Observations")) se nomtitle mgroups("Poison pill removal" "Greater ability to call special me
+> eting", pattern(0 1 0 0 1 0)) title("Table 6: Ownership by passive investors and takeover defenses.
+> ") label
+
+Table 6: Ownership by passive investors and takeover defenses.
+-----------------------------------------------------------------------------------------------------
+> ---------------
+                     Poison pil~l    Greater ab~                                                     
+>                
+                              (1)             (2)             (3)             (4)             (5)    
+>          (6)   
+-----------------------------------------------------------------------------------------------------
+> ---------------
+Passive %                   0.266           0.278           0.381           0.698*          0.693*   
+>        1.019*  
+                          (0.259)         (0.263)         (0.362)         (0.284)         (0.286)    
+>      (0.472)   
+-----------------------------------------------------------------------------------------------------
+> ---------------
+Bandwidth                     250             250             250             250             250    
+>          250   
+Polynomial order, N             1               2               3               1               2    
+>            3   
+Float control                 Yes             Yes             Yes             Yes             Yes    
+>          Yes   
+Year fixed effects            Yes             Yes             Yes             Yes             Yes    
+>          Yes   
+# of firms                   1012            1012            1012            1012            1012    
+>         1012   
+Observations                 1751            1751            1751            1751            1751    
+>         1751   
+-----------------------------------------------------------------------------------------------------
+> ---------------
+Standard errors in parentheses
+* p<0.05, ** p<0.01, *** p<0.001
+
+. 
+. do "/var/folders/cg/tlbkj1617q313hnpl7tm3krw0000gn/T//SD47128.000000"
+
+. estimates clear
+
+. 
+end of do-file
+
+. do "/var/folders/cg/tlbkj1617q313hnpl7tm3krw0000gn/T//SD47128.000000"
+
+. ******Table 7: Ownership by passive investors and dual class share structures.
+. sum dualclass
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+   dualclass |      1,754    .1277081    .3338597          0          1
+
+. gen dualclass_scaled = dualclass/`r(sd)'
+(2,623 missing values generated)
+
+. 
+. ivreghdfe dualclass_scaled ln_may_mrkt_cap ln_float (pct_passive_own_scaled = r2000), absorb(year) 
+> cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =     1012                Number of obs =     1751
+                                                      F(  3,  1011) =     5.51
+                                                      Prob > F      =   0.0009
+Total (centered) SS     =  1745.894642                Centered R2   =  -1.2247
+Total (uncentered) SS   =  1745.894642                Uncentered R2 =  -1.2247
+Residual SS             =   3884.08224                Root MSE      =    1.493
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+      dualclass_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |  -1.867676   .5092004    -3.67   0.000    -2.866887   -.8684658
+       ln_may_mrkt_cap |   -1.84033   .5401119    -3.41   0.001    -2.900199   -.7804612
+              ln_float |   1.044012   .3971475     2.63   0.009     .2646847     1.82334
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):             16.437
+                                                   Chi-sq(1) P-val =    0.0001
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               27.122
+                         (Kleibergen-Paap rk Wald F statistic):         19.012
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         5           0           5     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 1
+
+added macro:
+         e(Polynomial) : "1"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col1
+
+. 
+. ivreghdfe dualclass_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float (pct_passive_own_scaled = r20
+> 00), absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =     1012                Number of obs =     1751
+                                                      F(  4,  1011) =     7.32
+                                                      Prob > F      =   0.0000
+Total (centered) SS     =  1745.894642                Centered R2   =  -1.3285
+Total (uncentered) SS   =  1745.894642                Uncentered R2 =  -1.3285
+Residual SS             =  4065.399822                Root MSE      =    1.528
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+      dualclass_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |  -1.952047   .5032357    -3.88   0.000    -2.939553   -.9645406
+       ln_may_mrkt_cap |  -28.97449   8.196034    -3.54   0.000    -45.05768    -12.8913
+     ln_may_mrkt_cap_2 |   .6348337   .1895606     3.35   0.001     .2628565    1.006811
+              ln_float |   1.250132   .4159087     3.01   0.003     .4339886    2.066275
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):             15.425
+                                                   Chi-sq(1) P-val =    0.0001
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               26.704
+                         (Kleibergen-Paap rk Wald F statistic):         17.969
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         5           0           5     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 2
+
+added macro:
+         e(Polynomial) : "2"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col2
+
+. 
+. ivreghdfe dualclass_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3 ln_float (pct_passiv
+> e_own_scaled = r2000), absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =     1012                Number of obs =     1751
+                                                      F(  5,  1011) =     4.41
+                                                      Prob > F      =   0.0006
+Total (centered) SS     =  1745.894642                Centered R2   =  -2.5528
+Total (uncentered) SS   =  1745.894642                Uncentered R2 =  -2.5528
+Residual SS             =  6202.772651                Root MSE      =    1.888
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+      dualclass_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |  -2.625311   .8745537    -3.00   0.003     -4.34146   -.9091629
+       ln_may_mrkt_cap |   766.5852   511.9828     1.50   0.135    -238.0854    1771.256
+     ln_may_mrkt_cap_2 |   -36.7832   24.14076    -1.52   0.128    -84.15494    10.58854
+     ln_may_mrkt_cap_3 |   .5858464   .3787654     1.55   0.122    -.1574099    1.329103
+              ln_float |   1.787174   .7129338     2.51   0.012      .388175    3.186174
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):              9.610
+                                                   Chi-sq(1) P-val =    0.0019
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               12.659
+                         (Kleibergen-Paap rk Wald F statistic):         10.247
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3
+                      ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         5           0           5     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 3
+
+added macro:
+         e(Polynomial) : "3"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col3
+
+. 
+end of do-file
+
+. esttab col*, keep(pct_passive_own_scaled) stats(Bandwidth Polynomial float_control year_fixed_effec
+> t N_clust N, label("Bandwidth" "Polynomial order, N" "Float control" "Year fixed effects" "# of fir
+> ms" "Observations")) se nomtitle title("Table 7: Ownership by passive investors and dual class shar
+> e structures.") label
+
+Table 7: Ownership by passive investors and dual class share structures.
+--------------------------------------------------------------------
+                              (1)             (2)             (3)   
+--------------------------------------------------------------------
+Passive %                  -1.868***       -1.952***       -2.625** 
+                          (0.509)         (0.503)         (0.875)   
+--------------------------------------------------------------------
+Bandwidth                     250             250             250   
+Polynomial order, N             1               2               3   
+Float control                 Yes             Yes             Yes   
+Year fixed effects            Yes             Yes             Yes   
+# of firms                   1012            1012            1012   
+Observations                 1751            1751            1751   
+--------------------------------------------------------------------
+Standard errors in parentheses
+* p<0.05, ** p<0.01, *** p<0.001
+
+. do "/var/folders/cg/tlbkj1617q313hnpl7tm3krw0000gn/T//SD47128.000000"
+
+. estimates clear
+
+. 
+end of do-file
+
+. do "/var/folders/cg/tlbkj1617q313hnpl7tm3krw0000gn/T//SD47128.000000"
+
+. **************Table 8: Ownership by passive investors and shareholder support for proposals.
+. sum supp_mgmt
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+   supp_mgmt |      1,359    95.90884     5.69465          0        100
+
+. gen supp_mgmt_scaled = supp_mgmt/`r(sd)'
+(3,018 missing values generated)
+
+. sum supp_sh 
+
+    Variable |        Obs        Mean    Std. Dev.       Min        Max
+-------------+---------------------------------------------------------
+     supp_sh |        108    34.23153     24.8884   .4867654   96.38271
+
+. gen supp_sh_scaled = supp_sh/`r(sd)'
+(4,269 missing values generated)
+
+. 
+. 
+. ivreghdfe supp_mgmt_scaled ln_may_mrkt_cap ln_float (pct_passive_own_scaled = r2000), absorb(year) 
+> cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =      664                Number of obs =     1359
+                                                      F(  3,   663) =     8.12
+                                                      Prob > F      =   0.0000
+Total (centered) SS     =  1275.183253                Centered R2   =  -0.2397
+Total (uncentered) SS   =  1275.183253                Uncentered R2 =  -0.2397
+Residual SS             =  1580.836644                Root MSE      =    1.081
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+      supp_mgmt_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |  -.5786617   .3241135    -1.79   0.075    -1.215074    .0577509
+       ln_may_mrkt_cap |  -.5330544   .4174033    -1.28   0.202    -1.352646    .2865373
+              ln_float |   .3998839   .4319817     0.93   0.355     -.448333    1.248101
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):              6.993
+                                                   Chi-sq(1) P-val =    0.0082
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               14.661
+                         (Kleibergen-Paap rk Wald F statistic):          8.703
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         4           0           4     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 1
+
+added macro:
+         e(Polynomial) : "1"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col1
+
+. 
+. ivreghdfe supp_mgmt_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float (pct_passive_own_scaled = r20
+> 00), absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =      664                Number of obs =     1359
+                                                      F(  4,   663) =     7.54
+                                                      Prob > F      =   0.0000
+Total (centered) SS     =  1275.183253                Centered R2   =  -0.2521
+Total (uncentered) SS   =  1275.183253                Uncentered R2 =  -0.2521
+Residual SS             =   1596.60295                Root MSE      =    1.087
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+      supp_mgmt_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |  -.5939911   .3126054    -1.90   0.058    -1.207807    .0198248
+       ln_may_mrkt_cap |   -4.29494   4.084764    -1.05   0.293    -12.31557    3.725691
+     ln_may_mrkt_cap_2 |   .0876612   .1011987     0.87   0.387    -.1110473    .2863697
+              ln_float |    .442036   .3989574     1.11   0.268    -.3413362    1.225408
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):              7.732
+                                                   Chi-sq(1) P-val =    0.0054
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               15.722
+                         (Kleibergen-Paap rk Wald F statistic):          9.503
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         4           0           4     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 2
+
+added macro:
+         e(Polynomial) : "2"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col2
+
+. 
+. ivreghdfe supp_mgmt_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3 ln_float (pct_passiv
+> e_own_scaled = r2000), absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =      664                Number of obs =     1359
+                                                      F(  5,   663) =     4.60
+                                                      Prob > F      =   0.0004
+Total (centered) SS     =  1275.183253                Centered R2   =  -0.5373
+Total (uncentered) SS   =  1275.183253                Uncentered R2 =  -0.5373
+Residual SS             =  1960.289242                Root MSE      =    1.205
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+      supp_mgmt_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |  -.8722737   .5668719    -1.54   0.124    -1.985354    .2408067
+       ln_may_mrkt_cap |   281.0694   232.7962     1.21   0.228    -176.0371    738.1759
+     ln_may_mrkt_cap_2 |  -13.24901   10.84178    -1.22   0.222    -34.53737     8.03936
+     ln_may_mrkt_cap_3 |   .2073775   .1677033     1.24   0.217     -.121916     .536671
+              ln_float |   .7967186    .721922     1.10   0.270    -.6208102    2.214247
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):              3.615
+                                                   Chi-sq(1) P-val =    0.0573
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):                6.254
+                         (Kleibergen-Paap rk Wald F statistic):          3.937
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3
+                      ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         4           0           4     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 3
+
+added macro:
+         e(Polynomial) : "3"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col3
+
+. 
+. ivreghdfe supp_sh_scaled ln_may_mrkt_cap ln_float (pct_passive_own_scaled = r2000), absorb(year) cl
+> uster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =       69                Number of obs =      108
+                                                      F(  3,    68) =     1.64
+                                                      Prob > F      =   0.1892
+Total (centered) SS     =   105.164675                Centered R2   =  -0.1199
+Total (uncentered) SS   =   105.164675                Uncentered R2 =  -0.1199
+Residual SS             =  117.7722279                Root MSE      =     1.08
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+        supp_sh_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .5840125   .5888958     0.99   0.325    -.5911108    1.759136
+       ln_may_mrkt_cap |   .0769635   .9599607     0.08   0.936    -1.838608    1.992535
+              ln_float |    .125951   .7345143     0.17   0.864     -1.33975    1.591652
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):              2.489
+                                                   Chi-sq(1) P-val =    0.1146
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):                7.235
+                         (Kleibergen-Paap rk Wald F statistic):          2.476
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         4           0           4     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 1
+
+added macro:
+         e(Polynomial) : "1"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col4
+
+. 
+. ivreghdfe supp_sh_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float (pct_passive_own_scaled = r2000
+> ), absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =       69                Number of obs =      108
+                                                      F(  4,    68) =     1.84
+                                                      Prob > F      =   0.1321
+Total (centered) SS     =   105.164675                Centered R2   =  -0.0943
+Total (uncentered) SS   =   105.164675                Uncentered R2 =  -0.0943
+Residual SS             =  115.0854914                Root MSE      =    1.073
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+        supp_sh_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .5506905   .4995914     1.10   0.274    -.4462287     1.54761
+       ln_may_mrkt_cap |  -11.21193   38.48438    -0.29   0.772    -88.00632    65.58246
+     ln_may_mrkt_cap_2 |   .2635668   .9104731     0.29   0.773    -1.553254    2.080388
+              ln_float |   .1884202   .6855611     0.27   0.784    -1.179596    1.556436
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):              3.250
+                                                   Chi-sq(1) P-val =    0.0714
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               11.483
+                         (Kleibergen-Paap rk Wald F statistic):          3.491
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         4           0           4     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 2
+
+added macro:
+         e(Polynomial) : "2"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col5
+
+. 
+. ivreghdfe supp_sh_scaled ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3 ln_float (pct_passive_
+> own_scaled = r2000), absorb(year) cluster(cusip6)
+(MWFE estimator converged in 1 iterations)
+
+IV (2SLS) estimation
+--------------------
+
+Estimates efficient for homoskedasticity only
+Statistics robust to heteroskedasticity and clustering on cusip6
+
+Number of clusters (cusip6) =       69                Number of obs =      108
+                                                      F(  5,    68) =     1.53
+                                                      Prob > F      =   0.1932
+Total (centered) SS     =   105.164675                Centered R2   =  -0.1545
+Total (uncentered) SS   =   105.164675                Uncentered R2 =  -0.1545
+Residual SS             =  121.4077256                Root MSE      =    1.107
+
+----------------------------------------------------------------------------------------
+                       |               Robust
+        supp_sh_scaled |      Coef.   Std. Err.      t    P>|t|     [95% Conf. Interval]
+-----------------------+----------------------------------------------------------------
+pct_passive_own_scaled |   .6364904   .5403766     1.18   0.243    -.4418142    1.714795
+       ln_may_mrkt_cap |  -1312.493   1677.901    -0.78   0.437    -4660.693    2035.707
+     ln_may_mrkt_cap_2 |   61.37752   78.58506     0.78   0.437    -95.43653    218.1916
+     ln_may_mrkt_cap_3 |  -.9563606   1.226499    -0.78   0.438    -3.403802    1.491081
+              ln_float |  -.0000973   .7307284    -0.00   1.000    -1.458243    1.458049
+----------------------------------------------------------------------------------------
+Underidentification test (Kleibergen-Paap rk LM statistic):              3.330
+                                                   Chi-sq(1) P-val =    0.0680
+------------------------------------------------------------------------------
+Weak identification test (Cragg-Donald Wald F statistic):               11.598
+                         (Kleibergen-Paap rk Wald F statistic):          3.584
+Stock-Yogo weak ID test critical values: 10% maximal IV size             16.38
+                                         15% maximal IV size              8.96
+                                         20% maximal IV size              6.66
+                                         25% maximal IV size              5.53
+Source: Stock-Yogo (2005).  Reproduced by permission.
+NB: Critical values are for Cragg-Donald F statistic and i.i.d. errors.
+------------------------------------------------------------------------------
+Hansen J statistic (overidentification test of all instruments):         0.000
+                                                 (equation exactly identified)
+------------------------------------------------------------------------------
+Instrumented:         pct_passive_own_scaled
+Included instruments: ln_may_mrkt_cap ln_may_mrkt_cap_2 ln_may_mrkt_cap_3
+                      ln_float
+Excluded instruments: r2000
+Partialled-out:       _cons
+                      nb: total SS, model F and R2s are after partialling-out;
+                          any small-sample adjustments include partialled-out
+                          variables in regressor count K
+------------------------------------------------------------------------------
+
+Absorbed degrees of freedom:
+-----------------------------------------------------+
+ Absorbed FE | Categories  - Redundant  = Num. Coefs |
+-------------+---------------------------------------|
+        year |         4           0           4     |
+-----------------------------------------------------+
+
+. estadd local Bandwidth = 250
+
+added macro:
+          e(Bandwidth) : "250"
+
+. estadd local Polynomial = 3
+
+added macro:
+         e(Polynomial) : "3"
+
+. estadd local float_control "Yes"
+
+added macro:
+      e(float_control) : "Yes"
+
+. estadd local year_fixed_effect "Yes"
+
+added macro:
+  e(year_fixed_effect) : "Yes"
+
+. estimates store col6
+
+. 
+end of do-file
+
+. esttab col*, keep(pct_passive_own_scaled) stats(Bandwidth Polynomial float_control year_fixed_effec
+> t N_clust N, label("Bandwidth" "Polynomial order, N" "Float control" "Year fixed effects" "# of fir
+> ms" "Observations")) se nomtitle mgroups("Management proposal support %" "Governance proposal suppo
+> rt %", pattern(1 0 0 1 0 0)) title("Table 8: Ownership by passive investors and shareholder support
+>  for proposals.") label
+
+Table 8: Ownership by passive investors and shareholder support for proposals.
+-----------------------------------------------------------------------------------------------------
+> ---------------
+                     Management~%                                    Governance~%                    
+>                
+                              (1)             (2)             (3)             (4)             (5)    
+>          (6)   
+-----------------------------------------------------------------------------------------------------
+> ---------------
+Passive %                  -0.579          -0.594          -0.872           0.584           0.551    
+>        0.636   
+                          (0.324)         (0.313)         (0.567)         (0.589)         (0.500)    
+>      (0.540)   
+-----------------------------------------------------------------------------------------------------
+> ---------------
+Bandwidth                     250             250             250             250             250    
+>          250   
+Polynomial order, N             1               2               3               1               2    
+>            3   
+Float control                 Yes             Yes             Yes             Yes             Yes    
+>          Yes   
+Year fixed effects            Yes             Yes             Yes             Yes             Yes    
+>          Yes   
+# of firms                    664             664             664              69              69    
+>           69   
+Observations                 1359            1359            1359             108             108    
+>          108   
+-----------------------------------------------------------------------------------------------------
+> ---------------
+Standard errors in parentheses
+* p<0.05, ** p<0.01, *** p<0.001
+
+. 
+. estimates clear
+
+. log close
+      name:  <unnamed>
+       log:  /Users/catherinez/Desktop/ecf/assignment2/assignment2.log
+  log type:  text
+ closed on:  22 Feb 2022, 22:52:59
+-----------------------------------------------------------------------------------------------------

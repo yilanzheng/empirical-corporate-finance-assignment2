@@ -1,0 +1,23 @@
+\begin{table}[htbp]\centering
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\caption{Table 2: Impact of index assignment on mutual fund ownership.}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{All mutual funds}&\multicolumn{1}{c}{Passive}&\multicolumn{1}{c}{Active}&\multicolumn{1}{c}{Unclassified}\\
+\hline
+R2000               &       1.416\sym{**} &       0.349\sym{***}&       1.034\sym{*}  &      0.0326         \\
+                    &     (0.528)         &    (0.0457)         &     (0.524)         &    (0.0195)         \\
+\hline
+Bandwidth           &         250         &         250         &         250         &         250         \\
+Polynomial order, N &           3         &           3         &           3         &           3         \\
+Float control       &         Yes         &         Yes         &         Yes         &         Yes         \\
+Year fixed effects  &         Yes         &         Yes         &         Yes         &         Yes         \\
+# of firms          &        1719         &        1719         &        1719         &        1719         \\
+Observations        &        4365         &        4365         &        4365         &        4365         \\
+R-squared           &       0.223         &       0.589         &       0.161         &       0.142         \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize Standard errors in parentheses}\\
+\multicolumn{5}{l}{\footnotesize \sym{*} \(p<0.05\), \sym{**} \(p<0.01\), \sym{***} \(p<0.001\)}\\
+\end{tabular}
+\end{table}
